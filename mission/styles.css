@@ -10,7 +10,7 @@ select {
     padding: 6px;
     font-size: 1rem;
 }
-mission-card {
+.mission-card {
     background-color: white;
     max-width: 650px;
     margin: 60px auto;
