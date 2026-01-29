@@ -36,6 +36,27 @@ body {
     display: none;
 }
 
+.site-nav.open {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+.site-nav.open .nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-nav.open .nav-list li {
+  padding: 0.5rem 0;
+}
+
+.site-nav.open .nav-list a {
+  color: #fff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
 .content {
     max-width: 980px;
     margin:0 auto;
@@ -71,6 +92,43 @@ body {
     color: #333;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  padding: 2rem 1rem;
+  z-index: 999;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid #333;
+  background: #fff;
+  cursor: pointer;
+  font-weight: 700;
+}
 @media (min-width:600px) {
     .gallery {
         grid-template-columns: repeat(2, 1fr);
