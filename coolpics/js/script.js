@@ -1,50 +1,38 @@
 const menuBtn = document.getElementById("menuBtn");
-const primaryNav = document.getElementById("primaryNav");
+const nav = document.getElementById("primaryNav");
 
-menuBtn.addEventListener("click", () => {
-  const isOpen = primaryNav.classList.toggle("open");
-  menuBtn.setAttribute("aria-expanded", String(isOpen));
+menuBtn.addEventListener("click", function () {
+  nav.classList.toggle("open");
 });
 
-window.addEventListener("resize", () => {
-  if (window.innerWidth >= 900) {
-    primaryNav.classList.remove("open");
-    menuBtn.setAttribute("aria-expanded", "false");
-  }
-});
+const gallery = document.querySelector(".gallery");
+const modal = document.getElementById("viewer");
+const modalImage = document.getElementById("viewerImg");
+const closeButton = document.getElementById("closeViewer");
 
-const modal = document.getElementById("modal");
-const modalImg = document.getElementById("modalImg");
-const modalClose = document.getElementById("modalClose");
+gallery.addEventListener("click", openModal);
 
-function openModal(imgEl) {
-  modal.classList.add("show");
-  modal.setAttribute("aria-hidden", "false");
+function openModal(e) {
+  if (e.target.tagName !== "IMG") return;
 
-  modalImg.src = imgEl.src;
-  modalImg.alt = imgEl.alt || "Enlarged photo";
+  const img = e.target;
+  const src = img.getAttribute("src");
+  const alt = img.getAttribute("alt");
+
+  const full = src.replace("-sm", "-full");
+
+  modalImage.src = full;
+  modalImage.alt = alt;
+
+  modal.showModal();
 }
 
-function closeModal() {
-  modal.classList.remove("show");
-  modal.setAttribute("aria-hidden", "true");
-  modalImg.src = "";
-  modalImg.alt = "";
-}
-
-document.querySelectorAll(".gallery img").forEach((img) => {
-  img.style.cursor = "pointer";
-  img.addEventListener("click", () => openModal(img));
+closeButton.addEventListener("click", function () {
+  modal.close();
 });
 
-modalClose.addEventListener("click", closeModal);
-
-modal.addEventListener("click", (e) => {
-  if (e.target === modal) closeModal();
-});
-
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modal.classList.contains("show")) {
-    closeModal();
+modal.addEventListener("click", function (event) {
+  if (event.target === modal) {
+    modal.close();
   }
 });

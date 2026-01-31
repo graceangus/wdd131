@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cool Pics</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <script defer src="js/script.js"></script>
 </head>
 
 <body>
@@ -30,15 +31,33 @@
     <h2 class="section-title">Current Work</h2>
 
     <section class="gallery" aria-label="Photo Gallery">
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
-      <img src="images/hot-spring.jpg" alt="Hot spring landscape" >
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
+      <figure>
+        <img src="images/hot-spring-sm.jpg" alt="Hot spring landscape" >
+      </figure>
     </section>
   </main>
 
@@ -46,13 +65,10 @@
     <p>© 2026 Cool Pics</p>
   </footer>
 
-  <div id="modal" class="modal" aria-hidden="true">
-    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Image modal">
-      <button id="modalClose" class="modal-close" type="button" aria-label="Close modal">X</button>
-      <img id="modalImg" class="modal-img" src="" alt="" />
-    </div>
-  </div>
+  <dialog class="viewer" id="viewer">
+    <img id="viewerImg" alt="" />
+    <button class="close-viewer" id="closeViewer" aria-label="Close viewer">X</button>
+  </dialog>
 
-  <script src="js/script.js"></script>
 </body>
 </html>
