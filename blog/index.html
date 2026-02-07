@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="blog/css/styles.css" />
-    <script defer src="blog/js/script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Read For Fun</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <h1 class="site-title">Kids Read For Fun</h1>
+
+    <nav class="site-nav" aria-label="Main menu">
+      <ul class="nav-list">
+        <li><a href="#">About</a></li>
+        <li><a href="#">Archive</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <article class="book-card" aria-label="Book review">
+      <div class="book-meta">
+        <p class="meta-item">July 5, 2022</p>
+        <p class="meta-item">10-14</p>
+        <p class="meta-item">Fantasy</p>
+        <p class="meta-item">
+          <span class="stars" role="img" aria-label="4 out of 5 stars">⭐⭐⭐⭐</span>
+        </p>
+      </div>
+
+      <div class="book-main">
+        <h2 class="book-title">Septimus Heap Book One: Magyk</h2>
+
+        <img class="book-cover" src="images/Magkycover2.jpg"
+             alt="Cover of the book Magyk by Angie Sage">
+
+        <p class="book-desc">
+          If you enjoy stories about seventh sons of seventh sons and magyk this is the book for you.
+        </p>
+      </div>
+
+      <p class="book-author">Grace Angus</p>
+    </article>
+  </main>
 </body>
 </html>

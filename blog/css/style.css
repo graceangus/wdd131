@@ -1,0 +1,134 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  line-height: 1.6;
+  background: #fff;
+  color: #111;
+}
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 10px;
+  background: #000;
+  color: #fff;
+  padding: 8px 12px;
+}
+.skip-link:focus {
+  left: 10px;
+}
+.site-title {
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: center;
+  margin: 20px 0 10px;
+  font-size: 1.8rem;
+}
+.site-nav {
+  border-top: 2px solid #e7b08f;
+  border-bottom: 2px solid #e7b08f;
+  padding: 10px 20px;
+}
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 18px;
+}
+.nav-list a {
+  color: #b12b3b;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+.nav-list a:hover,
+.nav-list a:focus {
+  text-decoration: underline;
+}
+.book-card {
+  margin: 18px 0 0;
+  padding: 0 20px;
+}
+.book-meta {
+  text-align: right;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+.book-meta .meta-item {
+  margin: 4px 0;
+}
+.book-meta .meta-item:first-child {
+  font-style: italic;
+}
+.book-main {
+  text-align: center;
+  margin-top: 10px;
+}
+.book-title {
+  color: #b12b3b;
+  font-family: Georgia, "Times New Roman", serif;
+  margin: 16px 0 10px;
+  font-size: 1.3rem;
+}
+.book-cover {
+  width: 220px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 10px;
+}
+.book-desc {
+  max-width: 420px;
+  margin: 0 auto 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+.book-author {
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  position: relative;
+}
+.book-author::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  border-top: 2px solid #e7b08f;
+}
+@media (min-width: 700px) {
+  .book-card {
+    max-width: 1000px;
+    margin: 25px auto 0;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-top: 40px;
+  }
+  .book-meta {
+    padding-right: 20px;
+    position: relative;
+    min-height: 360px;
+  }
+  .book-meta::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 45px;
+    bottom: 55px;
+    width: 2px;
+    background: #e7b08f;
+  }
+  .book-title {
+    text-align: left;
+    margin-top: 0;
+  }
+  .book-author {
+    grid-column: 1 / -1;
+  }
+}
