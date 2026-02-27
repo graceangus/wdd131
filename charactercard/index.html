@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta property="og:title" content="Character Card">
+    <meta property="og:description" content="A simple JavaScript character card.">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Character Card">
+    <meta name="twitter:description" content="A simple JavaScript character card.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Card</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="character.js" defer></script>
+</head>
+<body>
+
+    <div class="card">
+        <img id="characterImage">
+
+        <h1 id="characterName"></h1>
+
+        <p><strong>Class:</strong> <span id="characterClass"></span></p>
+        <p><strong>Level:</strong> <span id="characterLevel"></span></p>
+        <p><strong>Health:</strong> <span id="characterHealth"></span></p>
+
+        <div class="buttons">
+            <button id="attackBtn">Attacked</button>
+            <button id="levelBtn">Level Up</button>
+        </div>
+    </div>
+
+</body>
+</html>
