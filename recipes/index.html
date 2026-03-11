@@ -3,7 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>RecipeBook</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,22 +13,28 @@
       rel="stylesheet"
     />
 
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="RecipeBook">
-    <meta property="og:description" content="A simple recipe book with easy, tasty recipes.">
-    <meta property="og:url" content="Your URL">
-    <meta property="og:image" content="images/social-preview-image.png">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="RecipeBook" />
+    <meta
+      property="og:description"
+      content="A simple recipe book with easy, tasty recipes."
+    />
+    <meta property="og:url" content="Your URL" />
+    <meta property="og:image" content="images/social-preview-image.png" />
 
-    <meta name="twitter:card" content="Social Preview Image">
-    <meta name="twitter:title" content="RecipeBook">
-    <meta name="twitter:description" content="A simple recipe book with easy, tasty recipes.">
-    <meta name="twitter:image" content="images/social-preview-image.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RecipeBook" />
+    <meta
+      name="twitter:description"
+      content="A simple recipe book with easy, tasty recipes."
+    />
+    <meta name="twitter:image" content="images/social-preview-image.png" />
 
-    <link rel="icon" href="./favicon.ico">
-
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
 
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="recipes.js"></script>
   </head>
 
   <body>
@@ -49,35 +57,7 @@
       </div>
     </header>
 
-    <main>
-      <section class="recipe-card" aria-label="Recipe">
-        <div class="recipe-image">
-          <img src="images/apple-crisp.jpg" alt="Apple crisp with ice cream" />
-        </div>
-
-        <div class="recipe-content">
-          <span class="tag">dessert</span>
-          <h2>Apple Crisp</h2>
-
-          <span
-            class="rating"
-            role="img"
-            aria-label="Rating: 4 out of 5 stars"
-          >
-            <span aria-hidden="true" class="icon-star">★</span>
-            <span aria-hidden="true" class="icon-star">★</span>
-            <span aria-hidden="true" class="icon-star">★</span>
-            <span aria-hidden="true" class="icon-star">★</span>
-            <span aria-hidden="true" class="icon-star-empty">☆</span>
-          </span>
-
-          <p class="recipe-description">
-            This apple crisp recipe is a simple yet delicious fall dessert that’s
-            great served warm with vanilla ice cream.
-          </p>
-        </div>
-      </section>
-    </main>
+    <main id="recipe-container"></main>
 
     <footer class="site-footer">
       <div class="footer-left">
@@ -88,9 +68,9 @@
 
       <div class="footer-right">
         <div class="social">
-          <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
-          <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
-          <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+          <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon" /></a>
+          <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon" /></a>
+          <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon" /></a>
         </div>
       </div>
     </footer>
